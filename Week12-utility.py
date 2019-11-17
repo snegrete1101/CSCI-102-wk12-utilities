@@ -7,7 +7,7 @@ def PrintOutput(string):
     print('OUTPUT ', string)
 
 def LoadFile(path):
-    with open('test.txt', 'r') as path:
+    with open(path, 'r') as path:
         a = path.readlines()
         out =[]
         for i in a:
@@ -20,3 +20,9 @@ def UpdateString(string, char, index):
     a[index] = char
     out = ''.join(a)
     PrintOutput(out)
+
+def FindWordCount(list,word):
+    words = ''.join(list)
+    out = words.count(word)
+    return out
+
