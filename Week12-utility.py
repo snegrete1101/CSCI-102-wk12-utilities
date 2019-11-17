@@ -26,3 +26,16 @@ def FindWordCount(list,word):
     out = words.count(word)
     return out
 
+def ScoreFinder(players, scores, name):
+    name_low = name.lower()
+    name_out = name_low.capitalize()
+    a = ' '.join(players)
+    low = a.lower()
+    ls_low = low.split()
+    if name_low in ls_low:
+        location = ls_low.index(name_low)
+        score = scores[location]
+        print("OUTPUT %s got a score of %d" % (name_out,score))
+    else:
+        print("OUTPUT player not found")
+    
