@@ -40,9 +40,14 @@ def ScoreFinder(players, scores, name):
         print("OUTPUT player not found")
 
 def Union(list_a, list_b):
-    for i in list_b:
-        list_a.append(i)
-    return list_a
+    out = []
+    for i in list_a:
+        if i not in out:
+            out.append(i)
+    for j in list_b:
+        if j not in out:
+            out.append(j)
+    return out
 
 def Intersection(list_a, list_b):
     out = []
